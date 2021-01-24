@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
 class FreeGameResource(val repo: FreeGameClient) {
 
-    @CrossOrigin(origins = ["https://regaming.herokuapp.com/"])
     @GetMapping
     fun getFreeGames(): List<FreeGameModel> = repo.findAll().let {
         // println("Free games from database: ${it.map{game -> game.name}}")
