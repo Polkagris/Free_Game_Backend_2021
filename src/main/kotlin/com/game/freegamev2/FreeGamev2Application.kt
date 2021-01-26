@@ -12,14 +12,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 /*@EnableMongoRepositories(basePackageClasses = FreeGameClient.class)*/
 class FreeGamev2Application
 
-@Bean
-fun corsConfigurer(): WebMvcConfigurer? {
-	return object : WebMvcConfigurerAdapter() {
-		override fun addCorsMappings(registry: CorsRegistry) {
-			registry.addMapping("/**").allowedOrigins("*")
-		}
-	}
-}
+// @Bean
+// fun corsConfigurer(): WebMvcConfigurer? {
+// 	return object : WebMvcConfigurerAdapter() {
+// 		override fun addCorsMappings(registry: CorsRegistry) {
+// 			registry.addMapping("/**").allowedOrigins("*")
+// 		}
+// 	}
+// }
 
 fun main(args: Array<String>) {
 	runApplication<FreeGamev2Application>(*args)
